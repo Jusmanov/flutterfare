@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+</head>
+
+<body>
+  <div class = "hero_image">
+    <nav>
+      <ul>
+        <li><a href = "index.html"><img class = "nav-logo" src = "flutterfare.png" width = 125px height = 37.5px><a></a></li>
+        <div class = "nav-links">
+          <li><a href = "index.html#about">about</a></li>
+          <li><a href = "#">contact</a></li>
+        </div>
+      </ul>
+    </nav>
+    <div class = "first-text">
+      <div class = "first-text-text">
+        <h1>Comparing common transportation costs in NYC</h1>
+        <p>Flutterfare compares cost estimates for different modes of transportation (only for NYC) based on fare information provided by the NYC Taxi & Limousine Commission and citibike. Users can adjust various factors that determine the cost of either medium of transport such as time of ride, type of bike, etc.</p>
+        <button class="get-started">Get started →</button>
+        <div class = "affiliations">
+          <a href="https://www.citibikenyc.com"><img class = "affiliations-citibike-logo" href = "citibikenyc.com" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ2rrCY9nwtE69kToHFa3smwJQv1pra1GELQ&s" width = 171 height = 45px></a>
+          <a href = "https://www.nyc.gov/site/tlc/index.page"><img href = "nyc.gov/site/tlc/index.page"src = "https://www.nyc.gov/assets/tlc/images/content/pages/home/nyc-tlc-logo.svg" width = 190.5px></a>
+        </div>
+        
+      </div>
+      <div class = "hero-nyc-map-1"></div>
+      <div class = "hero-nyc-map-2"></div>
+      <div class = "hero-nyc-map-3"></div>
+      <img class="hero-bike" src = "https://www.bicycleretailer.com/sites/default/files/images/article/1.png">
+    </div>
+    
+    <div class = "hero_text" id = "about">
+      <div class = "hero-text-text">
+        <div class = "category-text">
+          about
+        </div>
+        <h1>What is Flutterfare?</h1>
+        <p class = "hero-text-p">With various ways to go around New York City, one may want to weigh their transportation options based on price range, time efficiency, safety, and accessibility. Flutterfare is a website designed to present and compare these options, currently limited to citibike and yellow cab taxis with support for the NYC metro system (MTA data) arriving by 2025. It was created in 2024 by John Usmanov, once an NY resident.</p>
+        <p class = "view-dashboard">View dashboard below ↓</p>
+      </div>
+      <div class = "hero_image2">
+        </div>
+    </div>
+
+    
+    <div class = "dashboard">
+      <div class = "dashboard-text">
+        <h1>Dashboard</h1>
+        <p>Obtain estimates and comparisons of NYC transportation costs (citibike, yellow cab). Additional transportation recommendations are also provided depending on trip factors.</p>
+        <h2>Factors and Trip Details</h2>
+        <div class = "factors">
+          <div class = "factor">
+            <div class = "factor-text">
+              <h3>Distance (miles)</h3>
+              <p>Approximate trip distance in miles.</p>
+            </div>
+            <div class = "factor-inputs">
+              <input type = "range" id = "myRange" min = "1" max = "100" value = "10">
+              <input type = "number" id = "myNumber" value = "10">
+            </div>
+          </div>
+          <div class = "factor">
+            <div class = "factor-text">
+              <h3>🚕 Rush Hour (4pm-8pm on weekdays)</h3>
+              <p>Time of ride is within rush hour.</p>
+            </div>
+            <input type = "checkbox" id = "rush-hour">
+          </div>
+          <div class = "factor">
+            <div class = "factor-text">
+              <h3>🚕 Overnight</h3>
+              <p>Trip is within the hours of 8pm to 6am.</p>
+            </div>
+            <input type = "checkbox" id = "overnight-surcharge">
+          </div>
+          <div class = "factor">
+            <div class = "factor-text">
+              <h3>🚕 Congestion Surcharge</h3>
+              <p>Trip begins, ends, or passes through Manhattan south of 96th Street.</p>
+            </div>
+            <input type = "checkbox" id = "congestion-surcharge">
+          </div>
+          <div class = "factor">
+            <div class = "factor-text">
+              <h3>🚕 Ride between Manhattan and JFK</h3>
+              <p>Trip goes from Manhattan to JFK or vice versa.</p>
+            </div>
+            <input type = "checkbox" id = "jfk-surcharge">
+          </div>
+        </div>
+      </div>
+      <div class = "dashboard-display">
+        <div class = "citibike-half">
+          <div class = "display-card" id = "citibike-display">
+            <img src = "https://d21xlh2maitm24.cloudfront.net/nyc/cobranding-citibike_lyft_negative_v1.png?mtime=20200521140631" width = 200px height = 90px>
+            <p class = "citibike-cost" id = "citibike-cost">$18.68</p>
+          </div>
+          <div class = "citibike-list">
+            <li>Price is estimated based on the implication that the rider will be traveling at an average of 8.75 mph, a fairly common citibike speed.</li>
+            <li>The citibike is one of the most environmentally-friendly transportation options in NYC</li>
+            <li>A citibike can get a rider to a destination (at shorter distances) faster than a taxi can during rush hour (4-8pm on weekdays). Taxis also have higher costs during rush hour.</li>
+            <li>Citibikes are ideal for shorter ranges, no more than 5-10 miles. Longer rides warrant taking a taxi, bus, or the metro.</li>
+          </div>
+        </div>
+        <div class = "yellow-cab-half">
+          <div class = "display-card" id = "yellow-cab-display">
+            <img src = "https://www.banterist.com/images/nyc-taxi-logo.jpg" width = 200px height = 69px>
+            <p class = "yellow-cab-cost" id = "yellow-cab-cost">$39.50</p>
+          </div>
+          <div class = "yellow-cab-list">
+            <li>Taxis in NYC are safe- drivers have been screened and taxi accidents are minimal.</li>
+            <li>Taxis are easy to find because of their high abundance within the city. For this reason, a rider doesn't have to follow a strict schedule to get on a taxi- there's much flexibility.</li>
+            <li>During rush hour, taxis can be inconvenient due to the slowing of traffic and the $2.50 rush hour surcharge. In this case, a citibike might be better.</li>
+            <li>Taxis are ideal for longer distances compared to citibikes.</li>
+          </div>  
+        </div>
+        <div class = "mta-half">
+          <div class = "display-card" id = "mta-display">
+            <img src = "https://www.digitalsignagefederation.org/wp-content/uploads/2017/09/MTA-NYC-Transit-Logo.png" width = 200px height = 37px>
+            <p class = "mta-cost" id = "mta-cost">$2.90/ride</p>
+          </div>
+          <div class = "mta-list">
+            <li>The MTA's transportation options are the cheapest in NYC. $2.90 per ride for the subway and the bus.</li>
+            <li>MTA Express bus costs $7 to ride.</li>
+            <li>NYC's metro is much faster than other transportation methods like cars (and taxis) and citibikes, especially over longer distances.</li>
+            <li>Unlike citibikes or taxis, it won't just be you riding. The MTA's bus and metro system ridership is around 5 million people total.</li>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -4,9 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Flutterfare</title>
+  <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 
 <body>
@@ -136,11 +142,38 @@
         </div>
       </div>
     </div>
-    
+    <div class = "map-div">
+      <div class = "map-text">
+        <h1>So, where can I find a citibike?</h1>
+        <p>There's an abundance of citibike stations scattered throughout NYC. Over the last decade, the city of New York has made massive efforts to increase the availability of citibikes due to their minimal cost and lack of carbon emissions. Check out the map to see all citibike stations in the city. </p>
+      </div>
+      <div id="map"></div>
+    </div>
+    <div class = "mta-map">
+      <div class = "mta-map-text">
+        <h1>Yes, NYC's subway (top) and bus (bottom) systems have been mapped too.</h1>
+        <p>Map only shows the typical weekday service of the Subway. Visit new.mta.info for further information regarding subway schedules. Both maps are up-to-date (upd. Aug. 2024 and Jul. 2024 respectively).</p>
+        <h2>How do I purchase my subway or bus ride in NYC?</h2>
+        <p>Per new.mta.info/fares - pay your subway fare at the turnstiles, and your bus fare by the door as you board. Subway accepts credit/debit cards and smartphone payment.</p>
+        <a href = new.mta.info>Visit the MTA's information site →</a>
+      </div>
+      <div class = "iframes">
+        <iframe class="pdf" 
+          src=
+        "subwaymap.pdf"
+        width="800" height="600">
+        </iframe>
+        <iframe class="pdf" 
+          src=
+        "busmap.pdf"
+        width="800" height="600">
+        </iframe>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
-  <script src="script.js"></script>
+  <script src="lodash.js"></script>
 </body>
 
 </html>
